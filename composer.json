@@ -7,5 +7,10 @@
 	},
 	"bin": [
 		"phpstan.phar"
-	]
+	],
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.7-dev"
+		}
+	}
 }
