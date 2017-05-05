@@ -1,0 +1,2 @@
+# PHPStan shim
+
