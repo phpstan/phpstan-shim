@@ -4,5 +4,8 @@
 	"license": ["MIT"],
 	"require": {
 		"php": "~7.0"
-	}
+	},
+	"bin": [
+		"phpstan.phar"
+	]
 }
