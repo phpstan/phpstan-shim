@@ -5,6 +5,9 @@
 	"require": {
 		"php": "~7.0"
 	},
+	"provide": {
+		"phpstan/phpstan": "0.7"
+	},
 	"bin": [
 		"phpstan.phar"
 	],
