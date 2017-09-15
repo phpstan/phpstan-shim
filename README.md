@@ -2,7 +2,7 @@
 
 The prefixed `.phar` distribution is built using [phpstan-compiler](https://github.com/fprochazka/phpstan-compiler)
 
-It cannot be installed along with classic `phsptan/phpstan` package.
+It cannot be installed along with classic `phpstan/phpstan` package.
 
 
 ## Usage
