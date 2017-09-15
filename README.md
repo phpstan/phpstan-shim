@@ -2,6 +2,9 @@
 
 The prefixed `.phar` distribution is built using [phpstan-compiler](https://github.com/fprochazka/phpstan-compiler)
 
+It cannot be installed along with classic `phpstan/phpstan` package.
+
+
 ## Usage
 
 Install the package
@@ -22,7 +25,7 @@ Check out the main repo for more options https://github.com/phpstan/phpstan
 
 It is recommended, that you set a `tmpDir` in your `phpstan.neon`, otherwise it uses the system temp directory.
 
-```
+```yaml
 parameters:
     tmpDir: var/cache/phpstan
 ```
