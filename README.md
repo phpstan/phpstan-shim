@@ -7,7 +7,7 @@ The prefixed `.phar` distribution is built using [phpstan-compiler](https://gith
 Install the package
 
 ```bash
-composer require --dev phpstan/phpstan-shim:^0.7@dev
+composer require --dev phpstan/phpstan-shim
 ```
 
 and use it like the original executable
