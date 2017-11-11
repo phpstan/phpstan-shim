@@ -5,8 +5,8 @@
 	"require": {
 		"php": "~7.0"
 	},
-	"provide": {
-		"phpstan/phpstan": "0.9"
+	"replace": {
+		"phpstan/phpstan": "self.version"
 	},
 	"bin": [
 		"phpstan.phar"
