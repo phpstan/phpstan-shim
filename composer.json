@@ -6,14 +6,14 @@
 		"php": "~7.0"
 	},
 	"provide": {
-		"phpstan/phpstan": "0.8"
+		"phpstan/phpstan": "0.9"
 	},
 	"bin": [
 		"phpstan.phar"
 	],
 	"extra": {
 		"branch-alias": {
-			"dev-master": "0.8-dev"
+			"dev-master": "0.9-dev"
 		}
 	}
 }
