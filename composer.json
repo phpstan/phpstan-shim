@@ -9,6 +9,7 @@
 		"phpstan/phpstan": "self.version"
 	},
 	"bin": [
+		"phpstan",
 		"phpstan.phar"
 	],
 	"extra": {
