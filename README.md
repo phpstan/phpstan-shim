@@ -1,6 +1,6 @@
 # PHPStan shim
 
-The prefixed `.phar` distribution is built using [phpstan-compiler](https://github.com/phpstan/phpstan-compiler)
+The prefixed `.phar` distribution is built using [phpstan-compiler](https://github.com/phpstan/phpstan-compiler).
 
 ## Usage
 
@@ -16,7 +16,9 @@ and use it like the original executable
 vendor/bin/phpstan.phar analyse src
 ```
 
-Check out the main repo for more options https://github.com/phpstan/phpstan
+Check out the main repo for more options [https://github.com/phpstan/phpstan](https://github.com/phpstan/phpstan).
+
+For technical reasons, if your project depends on `nikic/php-parser` package, make sure you have the `PHAR` PHP extension enabled, otherwise the composer autoloader will not work as expected.
 
 ## Configuration
 
