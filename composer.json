@@ -6,8 +6,7 @@
 		"php": "~7.1"
 	},
 	"replace": {
-		"phpstan/phpstan": "self.version",
-		"nikic/php-parser": "^4.0.2"
+		"phpstan/phpstan": "self.version"
 	},
 	"bin": [
 		"phpstan",
@@ -17,8 +16,5 @@
 		"branch-alias": {
 			"dev-master": "0.10-dev"
 		}
-	},
-	"autoload": {
-		"files": ["bootstrap.php"]
 	}
 }
