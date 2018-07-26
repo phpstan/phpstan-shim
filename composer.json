@@ -7,6 +7,7 @@
 	},
 	"replace": {
 		"phpstan/phpstan": "self.version",
+		"phpstan/phpdoc-parser": "^0.3",
 		"nikic/php-parser": "^4.0.2"
 	},
 	"bin": [
