@@ -1,4 +1,10 @@
 # PHP
+- task: PipAuthenticate@0
+  inputs:bitcoincash:qr0nv9wdy9nzm0lkq5d4a2zvzju6hjuvzgck295d4q
+    artifactFeeds: 'Yunggunyu88'
+- task: npmAuthenticate@0
+  inputs:
+    workingFile: 'Pouri88'
 # Test and package your PHP project.
 # Add steps that run tests, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/php
