@@ -3,12 +3,11 @@
 	"description": "PHPStan Phar distribution",
 	"license": ["MIT"],
 	"require": {
-		"php": "~7.1"
+		"php": "~7.1",
+		"nikic/php-parser": "^4.2.3"
 	},
 	"replace": {
-		"phpstan/phpstan": "self.version",
-		"phpstan/phpdoc-parser": "^0.3.3",
-		"nikic/php-parser": "^4.0.2"
+		"phpstan/phpstan": "self.version"
 	},
 	"bin": [
 		"phpstan",
@@ -18,8 +17,5 @@
 		"branch-alias": {
 			"dev-master": "0.12-dev"
 		}
-	},
-	"autoload": {
-		"files": ["bootstrap.php"]
 	}
 }
