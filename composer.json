@@ -17,5 +17,8 @@
 		"branch-alias": {
 			"dev-master": "0.12-dev"
 		}
+	},
+	"autoload": {
+		"files": ["bootstrap.php"]
 	}
 }
