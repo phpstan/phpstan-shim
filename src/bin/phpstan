@@ -1,0 +1,76 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
+(function () {
+	require_once __DIR__ . '/../vendor/autoload.php';
+
+	$command = new class() extends Symfony\Component\Console\Command\Command {
+
+		protected function configure()
+		{
+			$this->setName('analyse')
+            			->setDescription('Analyses source code')
+            			->setDefinition([
+            				new InputArgument('paths', InputArgument::OPTIONAL | InputArgument::IS_ARRAY, 'Paths with source code to run analysis on'),
+            				new InputOption('paths-file', null, InputOption::VALUE_REQUIRED, 'Path to a file with a list of paths to run analysis on'),
+            				new InputOption('configuration', 'c', InputOption::VALUE_REQUIRED, 'Path to project configuration file'),
+            				new InputOption('level', 'l', InputOption::VALUE_REQUIRED, 'Level of rule options - the higher the stricter'),
+            				new InputOption('no-progress', null, InputOption::VALUE_NONE, 'Do not show progress bar, only results'),
+            				new InputOption('debug', null, InputOption::VALUE_NONE, 'Show debug information - which file is analysed, do not catch internal errors'),
+            				new InputOption('autoload-file', 'a', InputOption::VALUE_REQUIRED, 'Project\'s additional autoload file path'),
+            				new InputOption('error-format', null, InputOption::VALUE_REQUIRED, 'Format in which to print the result of the analysis', 'table'),
+            				new InputOption('memory-limit', null, InputOption::VALUE_REQUIRED, 'Memory limit for analysis'),
+            				new InputOption('xdebug', null, InputOption::VALUE_NONE, 'Allow running with XDebug for debugging purposes'),
+            			]);
+		}
+
+		/**
+		 * @return string[]
+		 */
+		public function getAliases(): array
+		{
+			return ['analyze'];
+		}
+
+		protected function execute(InputInterface $input, OutputInterface $output)
+		{
+			$output->writeln('');
+			$output->writeln('Thank you for using PHPStan!');
+			$output->writeln('');
+			$output->writeln('With the release of PHPStan 0.12, the primary Composer package used by most users,');
+			$output->writeln('<fg=cyan>phpstan/phpstan</>, has switched to a PHAR file. It works the same way as phpstan-shim.');
+
+			$output->writeln('The need for a separate PHAR distribution has ceased.');
+			$output->writeln('Package <fg=cyan>phpstan/phpstan-shim</> is no longer needed.');
+			$output->writeln('');
+			$output->writeln('You should upgrade to <fg=cyan>phpstan/phpstan</> 0.12 with the following steps:');
+
+			$output->writeln('1) In your composer.json, rewrite line with <fg=cyan>"phpstan/phpstan-shim"</>');
+			$output->writeln('   to <fg=cyan>"phpstan/phpstan": "^0.12"</>.');
+			$output->writeln('2) Delete your <fg=cyan>composer.lock</>.');
+			$output->writeln('3) Delete <fg=cyan>vendor/phpstan</> directory.');
+			$output->writeln('4) Delete <fg=cyan>vendor/bin/phpstan</> and <fg=cyan>vendor/bin/phpstan.phar</>.');
+			$output->writeln('5) Run <fg=cyan>composer install</>.');
+
+			$output->writeln('');
+			$output->writeln('If you have any problem upgrading, don\'t hesitate to describe your issue at:');
+
+			$output->writeln('https://github.com/phpstan/phpstan/issues/new/choose');
+			$output->writeln('');
+
+			return 1;
+		}
+
+	};
+
+	$application = new \Symfony\Component\Console\Application();
+	$application->add($command);
+	$application->setDefaultCommand('analyse', true);
+	$application->run();
+
+})();

@@ -1,13 +1,9 @@
 {
 	"name": "phpstan/phpstan-shim",
-	"description": "PHPStan Phar distribution",
+	"description": "PHPStan PHAR distribution - deprecated",
 	"license": ["MIT"],
 	"require": {
-		"php": "~7.1",
-		"nikic/php-parser": "^4.2.3"
-	},
-	"replace": {
-		"phpstan/phpstan": "self.version"
+		"php": "~7.1"
 	},
 	"bin": [
 		"phpstan",
@@ -17,8 +13,5 @@
 		"branch-alias": {
 			"dev-master": "0.12-dev"
 		}
-	},
-	"autoload": {
-		"files": ["bootstrap.php"]
 	}
 }
